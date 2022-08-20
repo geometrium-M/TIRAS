@@ -1,0 +1,151 @@
+$color: #f5ad3f;
+$color_1: #fff;
+
+* {
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat';  
+}
+
+._container {
+    max-width: 1400px;
+    margin: 0 auto;  
+}
+
+a {
+    text-decoration: none;
+ }
+
+
+.header {
+    background-color: $color;
+
+    &__contact {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 0 10px 15px;
+
+        border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    &__search {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+    }
+}
+
+.contact {
+    display: flex;
+    align-items: center;
+    
+    &__phone,
+    &__email {
+        position: relative;
+        font-size: 12px;
+        color: $color_1;
+    }
+
+    &__phone::before {
+        font: var(--fa-font-solid);
+        content: "\f879";
+        position: absolute;
+        color: $color_1;
+        font-size: 9px;
+        top: 3px;
+        left: -15px;  
+    }
+
+    &__email::before {
+        font: var(--fa-font-solid);
+        content: "\f0e0";
+        position: absolute;
+        color: $color_1;
+        font-size: 9px;
+        top: 3px;
+        left: -15px;
+    }
+
+    &__callBack {
+        margin: 0 50px 0 10px;
+        color: $color_1;
+        font-size: 8px;  
+    }
+}
+
+.language {
+
+    &__select {
+        border: none;
+        background-color: $color;
+        color:$color_1;
+        font-size: 12px;
+    }
+
+}
+
+.logo {
+    &__img {
+        width: 150px;
+        height: 27px;
+    }
+}
+
+.search {
+
+    &__form {
+        display: flex;
+        align-items: center;     
+        background-color: white;
+        width: 700px;
+        border-radius: 5px;
+    }
+
+    &__input {
+        border: none;
+        font-size: 10px;
+        padding: 15px 25px;
+        margin-left: 5px;
+
+        width: 100%;
+    }
+    &__input::placeholder {
+        color: #c9c9c9;
+
+    }
+
+    &__btn_active {
+        border: none;
+        background-color: white;
+        font-size: 20px;
+        margin-right: 20px;
+    }
+
+    &__btn {
+        display: none;
+    }
+}
+
+.icon {
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        list-style-type: none;
+    }
+
+}
+
+   
+
+
+
+   
+    
+
+
