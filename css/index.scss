@@ -11,8 +11,23 @@ body{
     font-family: 'Montserrat';  
     background-color: #f7f7f7;
     flex: 0 0 1920px;
-
 }
+
+html,
+body {
+    height: 100%;
+}
+
+.body-wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 1 auto ;
+}
+
 
 ._container {
    max-width: 1400px;
@@ -298,13 +313,16 @@ a {
 
 
 .footer {
+    position: relative;
 
     &__top {
-        background-color: #f7f7f7;
-        max-width: 1200/1920 * 100%;
+        background-color: #efefef;
+        
         margin: 0 auto;
-        margin-top:140px;
-        margin-bottom: 50px;    
+        padding-top:140px;
+        padding-bottom: 50px;
+        padding-left: 360px;
+        padding-right: 360px;    
     }
 
     &__bottom {
@@ -334,6 +352,7 @@ a {
 
         &__item a {
             font-size: 14px;
+            line-height: 2.07;
             color: #000;
         }
     }
@@ -425,6 +444,349 @@ a {
         height: 16px;
     }
 }
+
+.online-chat {
+    position: absolute;
+    right: 85px;
+    bottom: 195px;
+    
+
+    &__icon {
+        display: block;
+        width: 92px;
+        height: 92px;
+        background-color: #fac859;
+        border: solid 6px #fff;
+        border-radius: 100%;
+
+        background-image: url('../img/chat.svg');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 45px;   
+    }
+
+}
+
+.social {
+    position: absolute;
+    bottom:775px;
+    right: 100px;
+
+    &__link {
+        display: block;
+        width: 60px;
+        height: 60px;
+        border-radius: 100%;
+        color: white;
+        position: relative;
+        
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+
+       
+        &.facebook {
+            background-color: #3a5998;
+
+            &::before {
+                font: var(--fa-font-brands);
+                content: "\f09a";
+                position: absolute;
+                font-size: 24px;
+                top: 18px;
+                left: 18px;
+            }
+ 
+        }
+
+        &.viber {
+            background-color: #7d3daf;
+
+            &::before {
+                font: var(--fa-font-brands);
+                content: "\f409";
+                position: absolute;
+                font-size: 24px;
+                top: 18px;
+                left: 18px;
+            }
+        }
+
+        &.whatsapp {
+            background-color: #48c557;
+
+            &::before {
+                font: var(--fa-font-brands);
+                content: "\f232"; 
+                position: absolute;
+                font-size: 24px;
+                top: 18px;
+                left: 18px;
+            }
+        }
+    }
+}
+
+.close-btn {
+    position: absolute;
+    right: 85px;
+    bottom: 653px;
+
+    &__icon {
+        display: block;
+        width: 92px;
+        height: 92px;
+        background-color: #fac859;
+        border: solid 6px #fff;
+        border-radius: 100%;
+
+        background-image: url('../img/cancel.svg');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 34px;  
+
+    }
+}
+
+.contact-form {
+    position: relative;
+    top: -55px;
+    background-color: #fff;
+    border-radius: 5px;
+    
+
+    &__wrapper {
+        padding-top: 57px;
+        padding-left: 87px;
+        
+    }
+
+    &__title {
+        font-size: 30px;
+        font-weight: 300;
+
+    }
+
+    &__subtitle {
+        font-size: 14px;
+        line-height: 1.5;
+        color: #787575;
+        padding-right: 495px;
+        margin-top: 25px;
+    }
+
+  
+}
+
+.form {
+    width: 368px;
+    position: relative;
+
+    &__btn {
+        width: 100%;
+        padding: 15px 0;
+        margin: 36px 0 114px 0;
+
+        background-color: #19c144;
+        color: white;
+        font-size: 14px;
+        font-weight: 800;
+        letter-spacing: 0.7px;
+        border: none;
+        border-radius: 3px;
+  
+    }
+
+    &__label {
+        font-size: 14px;
+        letter-spacing: 0.7px;
+        color: #6c6b6b;
+        padding: 15px 0 12px 0;
+
+        em {
+            color: #f75191;
+        
+        }
+    }
+
+    &__input {
+        height: 40px;
+        border-radius: 3px;
+        border: solid 1px #ebebeb;
+    }
+
+    &__text {
+        height: 135px;
+        border-radius: 3px;
+        border: solid 1px #ebebeb;
+        resize: none;
+    }
+
+    input,
+    label,
+    textarea {
+        display: block;
+        width: 100%;
+    }
+}
+
+.form::before {
+    content: '';
+    height: 470px;
+    width: 1px;
+    background-color: #efebeb;
+    position: absolute;
+    left: 510px;
+    top: 46px;
+}
+
+.form__name {
+    position: relative;
+
+    &:before {
+        font: var(--fa-font-solid);
+        content: "\f007";
+        position: absolute;
+        color: #b8b6b6;
+        font-size: 10px;
+        top: 60px;
+        left: 345px;
+
+    }
+}
+
+.form__phone {
+    position: relative;
+
+    &:before {
+        font: var(--fa-font-solid);
+        content: "\f879";
+        position: absolute;
+        color: #b8b6b6;
+        font-size: 10px;
+        top: 60px;
+        left: 345px;
+
+    }
+}
+
+.form__email {
+    position: relative;
+
+    &:before {
+        font: var(--fa-font-solid);
+        content: "\f0e0";
+        position: absolute;
+        color: #b8b6b6;
+        font-size: 10px;
+        top: 60px;
+        left: 345px;
+
+    }
+}
+
+.form__area {
+    position: relative;
+
+    &:before {
+        font: var(--fa-font-solid);
+        content: "\f304";
+        position: absolute;
+        color: #b8b6b6;
+        font-size: 10px;
+        top: 60px;
+        left: 345px;
+        
+
+    }
+}
+
+.form-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.page {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 210px;
+    left: 835px;
+    color: white;
+
+    &__title {
+        font-size: 36px;
+        font-weight: 800;
+        letter-spacing: 5.94px;
+        text-transform: uppercase;
+        margin-bottom: 6px;
+    }
+
+    &__route {
+        font-size: 12px;
+        font-weight: 500;
+    }
+
+    span {
+        font-size: 9px;
+        margin: 0 10px;
+    }
+}
+
+.form-info {
+    margin-right: 440px;
+    margin-top: 25px;
+
+    dt {
+        font-size: 18px;
+        font-weight: 600;
+        padding-bottom: 19px;
+        
+        &:not(:first-child) {
+            padding-top: 42px;
+        }
+    }
+
+    dd {
+        margin: 0;
+        font-size: 14px;
+        letter-spacing: 0.7px;
+        color: #2b2b2b;
+    }
+
+    &__tel {
+        color: #2b2b2b;
+    }
+
+    &__email {
+       text-decoration: underline; 
+       color: #2b2b2b;
+    
+    }
+
+    &__img {
+
+        &_facebook {
+            width: 37px;
+            height: 37px;
+            margin-right: 25px;
+        }
+
+        &_instagram {
+            width: 35px;
+            height: 36px;
+        }
+    }
+
+}
+
+
+
+
+
+
 
 
 

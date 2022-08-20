@@ -10,6 +10,21 @@ body {
   flex: 0 0 1920px;
 }
 
+html,
+body {
+  height: 100%;
+}
+
+.body-wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 1 auto;
+}
+
 ._container {
   max-width: 1400px;
   margin: 0 auto;
@@ -230,12 +245,16 @@ a {
   margin-top: 2px;
 }
 
+.footer {
+  position: relative;
+}
 .footer__top {
-  background-color: #f7f7f7;
-  max-width: 62.5%;
+  background-color: #efefef;
   margin: 0 auto;
-  margin-top: 140px;
-  margin-bottom: 50px;
+  padding-top: 140px;
+  padding-bottom: 50px;
+  padding-left: 360px;
+  padding-right: 360px;
 }
 .footer__bottom {
   background-color: #e8e8e8;
@@ -256,6 +275,7 @@ a {
 }
 .footer .menu-footer__item a {
   font-size: 14px;
+  line-height: 2.07;
   color: #000;
 }
 .footer__contacts {
@@ -322,4 +342,282 @@ a {
 .footer__img {
   width: 120px;
   height: 16px;
+}
+
+.online-chat {
+  position: absolute;
+  right: 85px;
+  bottom: 195px;
+}
+.online-chat__icon {
+  display: block;
+  width: 92px;
+  height: 92px;
+  background-color: #fac859;
+  border: solid 6px #fff;
+  border-radius: 100%;
+  background-image: url("../img/chat.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 45px;
+}
+
+.social {
+  position: absolute;
+  bottom: 775px;
+  right: 100px;
+}
+.social__link {
+  display: block;
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  color: white;
+  position: relative;
+}
+.social__link:not(:last-child) {
+  margin-bottom: 10px;
+}
+.social__link.facebook {
+  background-color: #3a5998;
+}
+.social__link.facebook::before {
+  font: var(--fa-font-brands);
+  content: "\f09a";
+  position: absolute;
+  font-size: 24px;
+  top: 18px;
+  left: 18px;
+}
+.social__link.viber {
+  background-color: #7d3daf;
+}
+.social__link.viber::before {
+  font: var(--fa-font-brands);
+  content: "\f409";
+  position: absolute;
+  font-size: 24px;
+  top: 18px;
+  left: 18px;
+}
+.social__link.whatsapp {
+  background-color: #48c557;
+}
+.social__link.whatsapp::before {
+  font: var(--fa-font-brands);
+  content: "\f232";
+  position: absolute;
+  font-size: 24px;
+  top: 18px;
+  left: 18px;
+}
+
+.close-btn {
+  position: absolute;
+  right: 85px;
+  bottom: 653px;
+}
+.close-btn__icon {
+  display: block;
+  width: 92px;
+  height: 92px;
+  background-color: #fac859;
+  border: solid 6px #fff;
+  border-radius: 100%;
+  background-image: url("../img/cancel.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 34px;
+}
+
+.contact-form {
+  position: relative;
+  top: -55px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+.contact-form__wrapper {
+  padding-top: 57px;
+  padding-left: 87px;
+}
+.contact-form__title {
+  font-size: 30px;
+  font-weight: 300;
+}
+.contact-form__subtitle {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #787575;
+  padding-right: 495px;
+  margin-top: 25px;
+}
+
+.form {
+  width: 368px;
+  position: relative;
+}
+.form__btn {
+  width: 100%;
+  padding: 15px 0;
+  margin: 36px 0 114px 0;
+  background-color: #19c144;
+  color: white;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.7px;
+  border: none;
+  border-radius: 3px;
+}
+.form__label {
+  font-size: 14px;
+  letter-spacing: 0.7px;
+  color: #6c6b6b;
+  padding: 15px 0 12px 0;
+}
+.form__label em {
+  color: #f75191;
+}
+.form__input {
+  height: 40px;
+  border-radius: 3px;
+  border: solid 1px #ebebeb;
+}
+.form__text {
+  height: 135px;
+  border-radius: 3px;
+  border: solid 1px #ebebeb;
+  resize: none;
+}
+.form input,
+.form label,
+.form textarea {
+  display: block;
+  width: 100%;
+}
+
+.form::before {
+  content: "";
+  height: 470px;
+  width: 1px;
+  background-color: #efebeb;
+  position: absolute;
+  left: 510px;
+  top: 46px;
+}
+
+.form__name {
+  position: relative;
+}
+.form__name:before {
+  font: var(--fa-font-solid);
+  content: "\f007";
+  position: absolute;
+  color: #b8b6b6;
+  font-size: 10px;
+  top: 60px;
+  left: 345px;
+}
+
+.form__phone {
+  position: relative;
+}
+.form__phone:before {
+  font: var(--fa-font-solid);
+  content: "\f879";
+  position: absolute;
+  color: #b8b6b6;
+  font-size: 10px;
+  top: 60px;
+  left: 345px;
+}
+
+.form__email {
+  position: relative;
+}
+.form__email:before {
+  font: var(--fa-font-solid);
+  content: "\f0e0";
+  position: absolute;
+  color: #b8b6b6;
+  font-size: 10px;
+  top: 60px;
+  left: 345px;
+}
+
+.form__area {
+  position: relative;
+}
+.form__area:before {
+  font: var(--fa-font-solid);
+  content: "\f304";
+  position: absolute;
+  color: #b8b6b6;
+  font-size: 10px;
+  top: 60px;
+  left: 345px;
+}
+
+.form-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.page {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 210px;
+  left: 835px;
+  color: white;
+}
+.page__title {
+  font-size: 36px;
+  font-weight: 800;
+  letter-spacing: 5.94px;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+.page__route {
+  font-size: 12px;
+  font-weight: 500;
+}
+.page span {
+  font-size: 9px;
+  margin: 0 10px;
+}
+
+.form-info {
+  margin-right: 440px;
+  margin-top: 25px;
+}
+.form-info dt {
+  font-size: 18px;
+  font-weight: 600;
+  padding-bottom: 19px;
+}
+.form-info dt:not(:first-child) {
+  padding-top: 42px;
+}
+.form-info dd {
+  margin: 0;
+  font-size: 14px;
+  letter-spacing: 0.7px;
+  color: #2b2b2b;
+}
+.form-info__tel {
+  color: #2b2b2b;
+}
+.form-info__email {
+  text-decoration: underline;
+  color: #2b2b2b;
+}
+.form-info__img_facebook {
+  width: 37px;
+  height: 37px;
+  margin-right: 25px;
+}
+.form-info__img_instagram {
+  width: 35px;
+  height: 36px;
 }/*# sourceMappingURL=index.css.map */
