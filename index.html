@@ -40,35 +40,46 @@
                         <img src="img/Logo.svg" alt="Logo" class="logo__img">
                     </div>
                     <div class="serch">
+                        
                         <form action="#" class="search__form">
                             <input type="text" name="form[]" class="search__input" placeholder="SEARCH">
                             <button type="submit" class="fa-solid fa-magnifying-glass search__btn_active"></button>
                         </form>
-                        <button class="search__btn"></button>
+                        
                     </div>
                     <div class="icon">
                         <ul class="icon__list">
-                            <li class="icon__item">
+
+                            <li class="icon__item _magnified">
+                                <a href="#">
+                                    <img src="img/search-icon.png" alt="search">
+                                </a>
+                            </li>
+
+
+                            <li class="icon__item _headphone">
                                 <a href="#">
                                     <img src="img/headphone.svg" alt="headphone">
                                 </a>
                             </li>
-                            <li class="icon__item">
+                            <li class="icon__item _heart">
                                 <a href="#">
                                     <img src="img/heart.svg" alt="heart">
                                 </a>
+                                <span>1</span>
                             </li>
-                            <li class="icon__item">
+                            <li class="icon__item _cart">
                                 <a href="#">
                                     <img src="img/cart.svg" alt="cart">
                                 </a>
+                                <span>4</span>
                             </li>
-                            <li class="icon__item">
+                            <li class="icon__item _user">
                                 <a href="#">
                                     <img src="img/user.svg" alt="user">
                                 </a>
                             </li>
-                            <li class="icon__item">
+                            <li class="icon__item _signin">
                                 <a href="#">SIGN IN</a>
                             </li>
                         </ul>
@@ -79,6 +90,12 @@
     
                 <div class="header__container _white">
                     <div class="header__nav nav _container">
+
+                        <button type="button" class="nav__icon icon-menu" onclick="toggleMobileMenu()"> 
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button> 
     
                         <div class="nav__body">
                             <nav class="nav__menu menu">
@@ -117,6 +134,10 @@
     
                 <div class="header__banner">
                    <img src="img/banner.webp" alt="">
+                   <div class="page">
+                    <div class="page__title">Contacts</div>
+                    <div class="page__route">Home <span class="fa-solid fa-angle-right"></span> Contacts</div>
+                </div>
                   
                 </div>
             </div>
@@ -125,19 +146,16 @@
     
         <main>
 
-            <div class="page">
-                <div class="page__title">Contacts</div>
-                <div class="page__route">Home <span class="fa-solid fa-angle-right"></span> Contacts</div>
-            </div>
+            
 
 
-            <div class="contact-form _container">
+          <div class="contact-form _container">
                 <div class="contact-form__wrapper">
                     <div>
                         <div class="contact-form__title">Contact Form</div>
                         <p class="contact-form__subtitle">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tempor, nec eleifend posuere vitae mauris, amet, velit. 
-                            Sit tellus nisl ultricies montes, enim tortor nisi. Feugiat sit id feugiat luctus viverra aliquam proin sed. 
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tempor, nec eleifend posuere vitae mauris, amet, velit. <br>
+                            Sit tellus nisl ultricies montes, enim tortor nisi. Feugiat sit id feugiat luctus viverra aliquam proin sed. <br>
                             Purus a enim risus posuere tellus pretium. 
                         </p>
                     </div>
@@ -170,17 +188,19 @@
                         </div>
 
                         <div class="form-info">
-                            <dl>
-                                <dt>Location</dt>
-                                <dd>Chisinau,
-                                    bvd. Moscova 15/7</dd>
-                                <dt>Phone</dt>
-                                <dd><a href="tel:+373 78 589 095" class="form-info__tel">+ 373 60 852 456</a></dd>
-                                <dd><a href="tel:+373 78 589 095" class="form-info__tel">+ 373 22 46 548</a></dd>
-                                <dt>Email</dt>
-                                <dd><a href="mailto:info@tiras.md" class="form-info__email">info@tiras.md</a></dd>
-                                <dt>Social</dt>
-                                <dd>
+                            <dl class="form-info__wrapper">
+                                <dt class="form-info__title form-info__title_location">Location</dt>
+                                <dd class="form-info__item">Chisinau, <br> bvd. Moscova 15/7</dd>
+
+                                <dt class="form-info__title form-info__title_phone">Phone</dt>
+                                <dd class="form-info__item"><a href="tel:+373 78 589 095">+ 373 60 852 456</a></dd>
+                                <dd class="form-info__item"><a href="tel:+373 78 589 095">+ 373 22 46 548</a></dd>
+
+                                <dt class="form-info__title form-info__title_email">Email</dt>
+                                <dd class="form-info__item form-info__item_underline"><a href="mailto:info@tiras.md">info@tiras.md</a></dd>
+
+                                <dt class="form-info__title form-info__title_social">Social</dt>
+                                <dd class="form-info__item">
                                     <a href="#"><img src="img/facebook.svg" alt="facebook" class="form-info__img_facebook"></a>
                                     <a href="#"><img src="img/instagram.svg" alt="instagram" class="form-info__img_instagram"></a>
                                 </dd>
@@ -189,13 +209,36 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="map ">
+                    <a href="https://yandex.ru/maps/10313/kishinev/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;"></a>
+                        <a href="https://yandex.ru/maps/geo/770871995/?ll=28.928149%2C46.985038&utm_medium=mapframe&utm_source=maps&z=11.24" style="color:#eee;font-size:12px;position:absolute;top:14px;"></a>
+                    <iframe src="https://yandex.ru/map-widget/v1/-/CCURnCdcPC" frameborder="1" allowfullscreen="true"></iframe>
+                </div>
+                
+           </div> 
+
+        
+            <div class="social">
+                <div class="social__container">
+                    <a href="#" class="social__link facebook"></a>
+                    <a href="#" class="social__link viber "></a>
+                    <a href="#" class="social__link whatsapp"></a>
+                </div>
             </div>
+        
+            <div class="close-btn">
+                <a href="#" class="close-btn__icon"></a>
+            </div>
+
+
         </main>
     
-        <footer class="footer">
+      <footer class="footer">
             <div class="footer__top">
-                <div class="footer__main">
-                    <div class="footer__column">
+                <div class="footer__main"> 
+
+                  <div class="footer__column">
                         <div class="footer__label">Catalog</div>
                         <nav class="footer__menu menu-footer">
                             <ul class="menu-footer__list">
@@ -207,6 +250,7 @@
                             </ul>
                         </nav>
                     </div>
+
                     <div class="footer__column">
                         <div class="footer__label">For customers</div>
                         <nav class="footer__menu menu-footer">
@@ -222,6 +266,7 @@
                             </ul>
                         </nav>
                     </div>
+
                     <div class="footer__column">
                         <div class="footer__label">About company</div>
                         <nav class="footer__menu menu-footer">
@@ -232,11 +277,8 @@
                                 <li class="menu-footer__item"><a href="#">SAUT results</a></li>
                             </ul>
                         </nav>
-                        
-    
-    
-    
                     </div>
+
                     <div class="footer__column">
                         <div class="footer__label _contact">Contacts</div>
                         <div class="footer__contacts contacts-footer">
@@ -248,7 +290,7 @@
                                 <a href="#" class="fa-brands fa-instagram"></a>
                             </div>
                         </div>
-                    </div>
+                    </div> 
     
                 </div>
             </div>
@@ -263,7 +305,7 @@
                 <a href="#" class="online-chat__icon"></a>
             </div>
             
-        </footer>
+        </footer> 
 
 
        
@@ -271,26 +313,14 @@
 
     
 
-    <div class="social">
-        <div class="social__container">
-            <a href="#" class="social__link facebook"></a>
-            <a href="#" class="social__link viber "></a>
-            <a href="#" class="social__link whatsapp"></a>
-        </div>
-    </div>
+    
 
-    <div class="close-btn">
-        <a href="#" class="close-btn__icon"></a>
-    </div>
+  
 
     
 
 
-    
-
-
-    
-    
+    <script src="index.js"></script>
 </body>
 </html>
 
