@@ -796,9 +796,11 @@ a {
     bottom: calc(145/1180) * 100%;
     z-index: 2;
 
+   
+
     @media(max-width:768px) {
-       top: 1%;
-       right: 2%;
+       bottom: -35%;
+       right: 3%;
        
     } 
 
@@ -823,19 +825,15 @@ a {
             height: 80px;
             background-size: 24px;
         }
-
         @media(max-width:1200px) {
-            width: 60px;
-            height: 60px;
+            width: 70px;
+            height: 70px;
             background-size: 18px;
         }
 
-        @media(max-width:768px) {
-            width: 50px;
-            height: 50px;
-            background-size: 16px;
-           
-        } 
+       
+
+        
 
     }
 }
