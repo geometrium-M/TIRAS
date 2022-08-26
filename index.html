@@ -76,10 +76,38 @@
                                     </a>
                                 </li>
                                 <li class="icon__item _signin">
-                                    <a href="#">SIGN IN</a>
+                                    <a href="#">LOG IN</a>
                                 </li>
                             </ul>
                         </div>
+
+
+
+                        <div class="form-popup" id="myForm">
+                            <form action="#" class="form-popup__container">
+                                <p class="form-popup__title">LogIn</p>
+                           
+                            <div>
+                                <label class="form-popup__label" for="email"><b>Email</b></label>
+                                <input class="form-popup__input" type="text" placeholder="Enter Email" name="email" required>
+                            </div>
+                    
+                            <div>
+                                <label class="form-popup__label" for="psw"><b>Password</b></label>
+                                <input class="form-popup__input" type="password" placeholder="Enter Password" name="psw" required>
+                            </div>
+                    
+                            <div>
+                                <button type="submit" class="form-popup__btn">Log in</button>
+                                <button type="button" class="form-popup__btn"  onclick="closeForm()">Close</button>
+                            </div>
+                            </form>
+                          </div>
+
+
+
+
+
                     </div>
                 </div>
                 
@@ -127,7 +155,7 @@
         </header>
     
 
-        <main>
+        <main class="main">
 
           <div class="contact-form _container">
                 <div class="contact-form__wrapper">
@@ -205,22 +233,12 @@
                 
            </div> 
 
-            <div class="social">
-                <div class="social__container">
-                    <a href="#" class="social__link facebook"></a>
-                    <a href="#" class="social__link viber "></a>
-                    <a href="#" class="social__link whatsapp"></a>
-                </div>
-            </div>
-        
-            <div class="close-btn">
-                <a href="#" class="close-btn__icon"></a>
-            </div>
+            
         </main>
     
       <footer class="footer">
-            <div class="footer__top">
-                <div class="footer__main"> 
+            <div class="footer__top ">
+                <div class="footer__main "> 
 
                   <div class="footer__column">
                         <div class="footer__label">Catalog</div>
@@ -285,12 +303,45 @@
                     <img src="img/creativSoft.webp" alt="creativSoft" class="footer__img">
             </div>
 
-            <div class="online-chat">
-                <a href="#" class="online-chat__icon"></a>
+            <div class="fab-container">
+                <div class="button iconbutton">
+                    <i class="fa-solid fa-xmark _main"></i>
+                </div>
+                <ul class="options">
+                    <li>
+                        <div class="iconbutton  _facebook">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="iconbutton _viber">
+                            <i class="fa-brands fa-viber "></i>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="iconbutton _whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </div>
+                    </li>
+                </ul>
             </div>
+        
+        
+            <div class="chat-container">
+                <div class="chat-container__button">
+                    <i class="fa-solid fa-comments"></i>
+                </div>
+            </div>
+
             
         </footer> 
     </div>
+
+
+
+    
+
+    
 
     
 

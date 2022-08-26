@@ -11,6 +11,8 @@ body{
     font-family: 'Montserrat';  
     background-color: #f7f7f7;
     flex: 1920px;
+
+    
 }
 
 html,
@@ -47,6 +49,9 @@ a {
 .header {
     background-color: $color;
 
+    &__body {
+    }
+
     &__container {
         width: 100%;
 
@@ -56,6 +61,15 @@ a {
 
         &._white {
             background-color: white;
+
+                &.activated {
+        height: 100vh;
+        }
+
+           
+
+
+    
         }
     }
 
@@ -171,6 +185,7 @@ a {
         }
 
         .search {
+            
     
             &__form {
                 display: flex;
@@ -180,6 +195,23 @@ a {
                 flex: 0 0  auto; 
                 border-radius: 5px;
                 margin: 0 70px 0 100px;
+
+                &.activated {
+                    @media(max-width:768px) {
+                        display: flex;
+                        position: absolute;
+                        width: 100%;
+                        top: -2px;
+                        z-index: 50;
+                        left: 0;
+                        margin: 0 auto;
+                        opacity: 1;
+                        transition: all 0.1s ease 0s; 
+                        
+                    
+                    } 
+
+                }
         
                @media(max-width: 1400px) {
                     width: 550px;
@@ -398,6 +430,15 @@ a {
         align-items: center;
         justify-content: space-between;
         padding: 8px 0;  
+        
+    
+
+        @media(max-width:768px) {
+            align-items: flex-start;
+            padding-top: 25px;
+            
+            
+        }
     }
 
     &__banner {
@@ -488,7 +529,7 @@ a {
     
             span {
                 transition: all 0.3s ease 0s;
-                top: 45%;
+                
                 left: 0px;
                 position: absolute;
                 width: 100%;
@@ -507,12 +548,16 @@ a {
                 span {
                     transform: scale(0);
                     
+                    
+                    
                     &:first-child {
                         transform: rotate(45deg);
+                        
                         top: 10px;
                     }
                     &:last-child {
                         transform: rotate(-45deg);
+                        
                         top: 10px;
                     }
                 }
@@ -531,18 +576,20 @@ a {
         }
 
         @media (max-width:768px) {
-            position: fixed;
+            
             width: 100%;
             height: 100%;
             overflow: auto;
-            top: 5%;
             left: 0;
             font-size: 24px;
             background-color: white;
             transition: left 0.3s ease 0s;
-            padding: 50px 25px;
             display: none;
             z-index: 9;
+        }
+
+        @media(max-width:450px) {
+           
         }
 
         &.activated {
@@ -561,7 +608,9 @@ a {
                 
                 @media(max-width:768px) {
                 flex-direction: column;
-                padding-left: 50px;           
+                padding-left: 40px;
+                padding-top: 30px;
+                margin: 0;           
                 }
             }
 
@@ -574,10 +623,18 @@ a {
                     font-size: 14px;
                     color: #000;
                     text-transform: uppercase;   
-                }
+
+                    @media (max-width: 768px) {
+                        font-size: 18px;  
+                    }
+                }  
 
                 @media(max-width:1400px) {
                     margin-bottom: 5px ;
+                }
+
+                @media (max-width: 768px) {
+                    padding-bottom: 10px;
                 }
             }
 
@@ -588,6 +645,14 @@ a {
     .media {
         display: flex;
         align-items: center;
+
+        &.activated {
+            display: none;
+        }
+
+      
+
+
 
         &__sale {
             font-size: 14px;
@@ -638,205 +703,15 @@ a {
             }       
         }       
     }
-}
-
-
-
-.online-chat {
-    position: absolute;
-    right: calc(85/1920) * 100%;
-    bottom: 42%;
-
-    @media(max-width:1400px) {
-        bottom: 20%;
-    } 
-
-    @media(max-width:650px) {
-        bottom: 10%;
-    } 
-
-    &__icon {
-        display: block;
-        width: 92px;
-        height: 92px;
-        background-color: #fac859;
-        border: solid 6px #fff;
-        border-radius: 100%;
-
-        background-image: url('../img/chat.svg');
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: 45px; 
-        
-        @media(max-width:1400px) {
-            width: 80px;
-            height: 80px;
-            background-size: 40px;
-        }
-
-        @media(max-width:1200px) {
-            width: 60px;
-            height: 60px;
-            background-size: 30px;
-        }
-
-    }
-
-}
-
-.social {
-    position: absolute;
-    bottom: calc(260/1180) * 100%;
-    right: calc(100/1920) * 100%;
-    z-index: 2;
-
-    @media(max-width:768px) {
-        bottom: -28%;
-        
-    } 
-
-    &__link {
-        display: block;
-        width: 60px;
-        height: 60px;
-        border-radius: 100%;
-        color: white;
-        position: relative;
-        
-        &:not(:last-child) {
-            margin-bottom: 10px;
-        }
-
-        @media(max-width:1400px) {
-            width: 50px;
-            height: 50px;    
-        }
-
-        @media(max-width:768px) {
-            width: 40px;
-            height: 40px;
-        }
-
-        &.facebook {
-            background-color: #3a5998;
-
-            &::before {
-                font: var(--fa-font-brands);
-                content: "\f09a";
-                position: absolute;
-                font-size: 24px;
-                top: 18px;
-                left: 18px;
-
-                @media(max-width:1400px) {
-                    font-size: 16px;
-                }   
-
-                @media(max-width:768px) {
-                    font-size: 14px;
-                    top: 14px;
-                    left: 14px;
-                } 
-                
-                
-            }
-        }
-
-        &.viber {
-            background-color: #7d3daf;
-
-            &::before {
-                font: var(--fa-font-brands);
-                content: "\f409";
-                position: absolute;
-                font-size: 24px;
-                top: 18px;
-                left: 18px;
-
-                @media(max-width:1400px) {
-                    font-size: 16px;
-                }
-
-                @media(max-width:768px) {
-                    font-size: 14px;
-                    top: 14px;
-                    left: 14px;
-                } 
-            }    
-        }
-
-        &.whatsapp {
-            background-color: #48c557;
-
-            &::before {
-                font: var(--fa-font-brands);
-                content: "\f232"; 
-                position: absolute;
-                font-size: 24px;
-                top: 18px;
-                left: 18px;
-
-                @media(max-width:1400px) {
-                    font-size: 16px;
-                }
-
-                @media(max-width:768px) {
-                    font-size: 14px;
-                    top: 14px;
-                    left: 14px;
-                } 
-            }    
-        }
-    }
-}
-
-.close-btn {
-    position: absolute;
-    right: calc(85/1920) * 100%;
-    bottom: calc(145/1180) * 100%;
-    z-index: 2;
-
-   
-
-    @media(max-width:768px) {
-       bottom: -35%;
-       right: 3%;
-       
-    } 
 
     
-    
-
-    &__icon {
-        display: block;
-        width: 92px;
-        height: 92px;
-        background-color: #fac859;
-        border: solid 6px #fff;
-        border-radius: 100%;
-
-        background-image: url('../img/cancel.svg');
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: 34px;  
-
-        @media(max-width:1400px) {
-            width: 80px;
-            height: 80px;
-            background-size: 24px;
-        }
-        @media(max-width:1200px) {
-            width: 70px;
-            height: 70px;
-            background-size: 18px;
-        }
-
-       
-
-        
-
-    }
 }
+
+
+
+
+
+
 
 
 
@@ -847,6 +722,10 @@ a {
 .footer {
     max-width: 100%;
     position: relative;
+
+    &.activated {
+        display: none;
+    }
 
     &__top {
         background-color: #efefef;
@@ -1023,6 +902,12 @@ a {
     }
 }
 
+
+.main {
+    &.activated {
+        display: none;
+    }
+}
 
 
 .contact-form {
@@ -1458,6 +1343,196 @@ a {
 
 
 
+.fab-container {
+    position: fixed;
+    bottom: calc(550/1980) * 100%;
+    right: calc(85/1920) * 100%;
+    cursor: pointer;
+
+    @media(max-width:1100px) {
+        right: calc(55/1920) * 100%;  
+    }
+
+    @media(max-width:767px) {
+        position: absolute;
+        
+    }
+
+    .iconbutton {
+        width: 60px;
+        height: 60px;
+        border-radius: 100%;
+        background-color: $color;
+        font-size: 24px;
+
+        @media(max-width:1100px) {
+            width: 40px;
+            height: 40px;
+            font-size: 16px;
+        }
+        
+
+        &._facebook {
+            background-color: #3a5998;
+            margin-bottom: 10px;
+        }
+        &._viber {
+            background-color: #7d3daf;
+            margin-bottom: 10px;
+        }
+        &._whatsapp {
+            background-color: #48c557;
+        }
+
+        i {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            color: white;
+
+            &._main {
+                color: #000;
+            }
+        }  
+    }
+
+    .button {
+        width: 90px;
+        height: 90px; 
+        border: solid 6px #fff; 
+        background-color: $color; 
+
+        @media(max-width:1100px) {
+            width: 70px;
+            height: 70px;
+        }
+    }
+
+    .options {
+        list-style: none;
+        position: absolute;
+        bottom: 100px;
+        right: 15px;
+        padding: 0;
+
+        li {
+            display: flex;
+            justify-content: flex-end;
+            
+           
+        }
+        
+    }
+}
+
+.chat-container {
+    position: fixed;
+    bottom: calc(150/1980) * 100%;
+    right: calc(85/1920) * 100%;
+    cursor: pointer;
+
+    @media(max-width:1100px) {
+        right: calc(55/1920) * 100%;  
+    }
+
+    @media(max-width:767px) {
+        position: absolute;
+    }
+
+    &__button {
+        width: 90px;
+        height: 90px;
+        border-radius: 100%;
+        border: solid 6px #fff; 
+        background-color: $color;
+        font-size: 30px;
+
+        @media(max-width:1100px) {
+            width: 70px;
+            height: 70px;
+        }
+    }
+
+    i {
+        display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            color: black;
+    }
+}
+
+.form-popup {
+    display: none;
+    position: absolute;
+    top: 200%;
+    right: 10%;
+    z-index: 10;
+    border: 3px solid #f1f1f1;
+    width: 80%;
+
+    @media(max-width:1400px) {
+        top: 225%;
+    }
+
+    @media(max-width:450px) {
+        top: 160%;
+    }
+
+
+    &.open {
+        display: block;
+    }
+    
+
+    &__container {
+        background-color: white;
+        width: 100%;
+        padding: 25px;
+    }
+
+    &__title {
+       font-size: 24px;
+    }
+    
+
+    &__label {
+        display: block;
+    }
+
+    &__input {
+        width: 100%;
+        padding: 15px;
+        margin: 5px 0 22px 0;
+        border: none;
+        background: #f1f1f1;
+
+        &:focus {
+            background-color: #ddd;
+            outline: none;
+        }
+    }
+
+    &__btn {
+        background-color: #04AA6D;
+        color: white;
+        padding: 16px 20px;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        margin-top: 10px;
+        margin-bottom:10px;
+        opacity: 0.8;
+
+        &:last-child {
+            background-color: $color;
+        }
+    }
+
+
+    
+  }
 
 
 
