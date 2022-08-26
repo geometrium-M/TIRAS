@@ -44,3 +44,10 @@ function toggleMobileMenu() {
 
     }
 
+    function closeSocial() {
+        let options = document.querySelector('.options');
+        options.classList.toggle('activated');
+        
+
+    }
+

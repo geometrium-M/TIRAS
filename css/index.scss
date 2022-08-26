@@ -1416,6 +1416,10 @@ a {
         right: 15px;
         padding: 0;
 
+        &.activated {
+            display: none;
+        }
+
         li {
             display: flex;
             justify-content: flex-end;

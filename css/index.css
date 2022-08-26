@@ -1269,6 +1269,9 @@ a {
   right: 15px;
   padding: 0;
 }
+.fab-container .options.activated {
+  display: none;
+}
 .fab-container .options li {
   display: flex;
   justify-content: flex-end;
