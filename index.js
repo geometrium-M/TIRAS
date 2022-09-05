@@ -8,6 +8,7 @@ function toggleMobileMenu() {
 
     let main = document.querySelector('.main').classList.toggle('activated');
     let footer = document.querySelector('.footer').classList.toggle('activated');
+    
 
 }
 
