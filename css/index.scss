@@ -28,7 +28,10 @@ body {
 
 main {
     max-height:  1130px;
-    position: relative;    
+    position: relative;   
+
+   
+    
 }
 
 ._container {
@@ -526,6 +529,7 @@ a {
             border: none;
             background-color: white;
             z-index: 10;
+            margin: auto 0;
     
             span {
                 transition: all 0.3s ease 0s;
@@ -533,7 +537,7 @@ a {
                 left: 0px;
                 position: absolute;
                 width: 100%;
-                height: 1px;
+                height: 0.5px;
                 background-color: black;
                 &:first-child {
                     top: 0px;
@@ -1475,6 +1479,7 @@ a {
     z-index: 10;
     border: 3px solid #f1f1f1;
     width: 80%;
+    background: #04AA6D;
 
     @media(max-width:1400px) {
         top: 225%;
